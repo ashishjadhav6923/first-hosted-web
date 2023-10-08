@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Irrigation System</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+    <link rel="stylesheet" type="text/css" href="abc.css">
+
+</head>
+<body>
+    <h1>Soil Moisture Monitoring</h1>
+    
+    <div id="moistureData">
+        <h2>Current Soil Moisture Level: <span id="moistureValue">---</span></h2>
+        <button onclick="refreshMoistureData()">Refresh</button>
+    </div>
+
+    <div id="moistureChart">
+        <!-- Add a chart library (e.g., Chart.js) to display moisture data graphically -->
+    </div>
+
+    <script>
+        // Mock function to generate random soil moisture data
+        function generateRandomMoisture() {
+            return (Math.random() * 100).toFixed(2); // Random value between 0 and 100
+        }
+
+        // Function to update the moisture value
+        function refreshMoistureData() {
+            const moistureValue = generateRandomMoisture();
+            document.getElementById("moistureValue").textContent = moistureValue + "%";
+        }
+
+        // Initial data refresh
+        refreshMoistureData();
+    </script>
+</body>
+</html>
